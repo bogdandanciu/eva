@@ -1,8 +1,8 @@
 # EVA Fork - Evaluation and Profiling
 
-This fork of [kaiko-ai/eva](https://github.com/kaiko-ai/eva) adds tooling and guidance for running, profiling, and optimizing model evaluations.
+Fork of [kaiko-ai/eva](https://github.com/kaiko-ai/eva) featuring optimizations for offline classification performance and support for evaluation and profiling.
 
-## 🧪 Local Setup
+## Local Setup
 
 ```bash
 git clone https://github.com/bogdandanciu/eva.git
