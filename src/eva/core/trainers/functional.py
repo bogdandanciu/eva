@@ -1,5 +1,7 @@
 """Fit session related functions."""
 
+import time
+
 from typing import List, Literal, Tuple
 
 from lightning.pytorch.utilities.types import _EVALUATE_OUTPUT
@@ -88,7 +90,10 @@ def run_evaluation(
     test_scores = None
 
     if "fit" in stages:
+        start = time.time()
         trainer.fit(model, datamodule=datamodule)
+        end = time.time()
+        print(f"Fitting step completed in: {end - start:.2f} seconds.")
     if "validate" in stages:
         validation_scores = trainer.validate(
             model=model,
